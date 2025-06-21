@@ -1,0 +1,66 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*Card Styles*/
+.country-flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 260px;
+  margin: 20px;
+  display: inline-block;
+}
+
+.country-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.country-flip-card:hover .country-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.country-flip-front, .country-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 10px;
+  color: black;
+
+}
+
+.country-flip-front img.flag {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.country-flip-front h3 {
+  font-size: 1.2em;
+  color: black;
+}
+
+.country-flip-back {
+  transform: rotateY(180deg);
+}
+
+
+.country-flip-back p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: black;
+}
